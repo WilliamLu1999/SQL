@@ -1,0 +1,2 @@
+#1308Medium
+SELECT gender,day, SUM(score_points) OVER(PARTITION BY gender ORDER BY gender, day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS Total FROM Scores
